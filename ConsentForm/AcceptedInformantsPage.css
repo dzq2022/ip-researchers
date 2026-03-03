@@ -1,0 +1,164 @@
+/* AcceptedInformantsPage.css (desktop-focused, matches ConsentHubPage styling) */
+
+.ai-page {
+  min-height: 100vh;
+  background: #f6f7fb;
+  padding: 18px;
+}
+
+/* Header card (same feel as .consent-hub-header) */
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e8eaf1;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.ai-titleblock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-title {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.ai-subtitle {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.ai-headerActions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Header buttons (same sizing + feel as ch-btn) */
+.ai-btn {
+  border: 1px solid #e6e7ee;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ai-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ai-btn-ghost {
+  background: #f8fafc;
+}
+
+.ai-btn-primary {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Main panel (white card) */
+.ai-panel {
+  margin-top: 14px;
+  background: #ffffff;
+  border: 1px solid #e8eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ai-panelHeader {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef0f6;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.ai-empty {
+  padding: 14px;
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+/* List layout */
+.ai-list {
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.ai-item {
+  border: 1px solid #eef0f6;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-itemMain {
+  min-width: 0;
+}
+
+.ai-name {
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-meta {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* Echo + Send Ini same-size buttons (you already had these; kept + aligned) */
+.ai-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ai-actionBtn {
+  min-width: 180px;
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid #e6e7ee;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ai-actionBtn-echoYes {
+  background: #ecfdf5;
+  border-color: #b7f0d0;
+  color: #065f46;
+}
+
+.ai-actionBtn-echoNo {
+  background: #fff7ed;
+  border-color: #ffd7a3;
+  color: #9a3412;
+}
+
+.ai-actionBtn-ini {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.ai-actionBtn-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

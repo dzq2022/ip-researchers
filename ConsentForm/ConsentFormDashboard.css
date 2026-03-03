@@ -1,0 +1,276 @@
+.send-welcome-btn{
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+.send-welcome-btn:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ConsentFormDashboard.css */
+.consent-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Sidebar Styles */
+.consent-sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  background: linear-gradient(to right, #009999, #00CCCC);
+  color: white;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.informants-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.informant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.informant-item:hover {
+  background-color: #f8f9fa;
+}
+
+.informant-name {
+  font-size: 0.9rem;
+  color: #36393B;
+  flex: 1;
+}
+
+.consent-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.status-sent {
+  background-color: #009999;
+}
+
+.status-not-sent {
+  background-color: #FE5F55;
+}
+
+.empty-informants {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Main Content Area */
+.consent-main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.content-header {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  color: #36393B;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f0f0f0;
+  border-top: 3px solid #009999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Create Form Section */
+.create-form-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.create-form-header {
+  padding: 1.5rem;
+  background: linear-gradient(to right, #009999, #00CCCC);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.create-form-content {
+  padding: 1.5rem;
+}
+
+/* Status Tooltips */
+.consent-status {
+  position: relative;
+  cursor: help;
+}
+
+.consent-status:hover::after {
+  content: attr(data-status);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #36393B;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin-right: 8px;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consent-dashboard {
+    flex-direction: column;
+  }
+
+  .consent-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .consent-main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .content-header {
+    margin-top: 1rem;
+  }
+}
+
+/* Custom Scrollbar for Sidebar */
+.informants-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.informants-scroll-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.informants-scroll-area::-webkit-scrollbar-thumb {
+  background: #009999;
+  border-radius: 3px;
+}
+
+.informants-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #00CCCC;
+}
+
+
+.informant-status-pack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.echo-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: help;
+  position: relative;
+}
+
+.echo-yes {
+  background-color: #2e7d32; /* green */
+}
+
+.echo-no {
+  background-color: #b0b0b0; /* grey */
+}
+
+/* Optional tooltip similar to consent-status */
+.echo-status:hover::after {
+  content: attr(data-status);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #36393B;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin-right: 8px;
+  z-index: 1;
+}

@@ -1,0 +1,130 @@
+
+
+/* ConsentTemplates.css */
+.consent-templates-manager {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.template-section {
+  margin-bottom: 20px;
+}
+
+.template-section h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.template-editor {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.template-editor:focus {
+  border-color: #1890ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+}
+
+
+/* Add these new styles to ConsentFormSection.css */
+
+.dashboard-container {
+  display: flex;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(54, 57, 59, 0.1);
+  height: calc(100vh - 4rem);
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  background: linear-gradient(to right, #009999, #00CCCC);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.informants-list {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: calc(100% - 4rem);
+}
+
+.informant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s;
+}
+
+.informant-item:hover {
+  background-color: #f8f9fa;
+}
+
+.informant-name {
+  font-size: 0.9rem;
+  color: #36393B;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.status-icon.sent {
+  background-color: #009999;
+}
+
+.status-icon.not-sent {
+  background-color: #FE5F55;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0; /* Prevents flex item from overflowing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  
+  .informants-list {
+    max-height: 300px;
+  }
+}
